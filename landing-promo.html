@@ -78,7 +78,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="form-card" id="lead-form-card">
       <h3 style="color:var(--oe-gray-900);">Reserva tu clase gratis <span class="tag-hint">Form Submission</span></h3>
-      <form data-lead-form id="form-lead-promo">
+      <form data-lead-form id="form-lead-promo" name="lead-promo" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html?tipo=prueba-gratis">
+  <input type="hidden" name="form-name" value="lead-promo" />
+  <p style="display:none;"><label>No llenar: <input name="bot-field" /></label></p>
         <div class="field">
           <label for="lead-name">Nombre completo</label>
           <input type="text" id="lead-name" name="name" placeholder="Ej. María Gómez" required>
