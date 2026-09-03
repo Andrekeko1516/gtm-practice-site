@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prueba Gratis — Oferta por Tiempo Limitado | OE Tagging Sandbox</title>
+<meta name="description" content="Landing de urgencia/promo para practicar countdown, lead forms y sticky CTA con GTM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="sandbox-banner">
+  🧪 Sandbox interno de tagging — landing de urgencia/promo. <a href="README.md">Ver cheat sheet →</a>
+</div>
+
+<!-- ============ COUNTDOWN BAR ============ -->
+<div class="countdown-bar">
+  <div class="container">
+    <strong>⚡ Oferta se acaba en:</strong>
+    <div class="countdown-timer" data-countdown>
+      <div><span data-cd-hours>48</span><small>Horas</small></div>
+      <div><span data-cd-minutes>00</span><small>Min</small></div>
+      <div><span data-cd-seconds>00</span><small>Seg</small></div>
+    </div>
+    <span class="tag-hint" style="background:rgba(255,255,255,.1); color:#fff; border-color:rgba(255,255,255,.4);">tag idea: Element Visibility</span>
+  </div>
+</div>
+
+<!-- ============ HEADER SIMPLE ============ -->
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo" data-nav-item="logo"><span class="logo-mark">OE</span> Sandbox</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html" data-nav-item="home">Inicio</a></li>
+      <li><a href="landing-pricing.html" data-nav-item="pricing">Planes</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú">☰</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO + FORM ============ -->
+<section class="section--navy">
+  <div class="container hero" style="align-items:flex-start;">
+    <div>
+      <span class="eyebrow" style="background:rgba(255,255,255,.15); color:#fff;">Oferta por tiempo limitado</span>
+      <h1>Tu primera clase de inglés es gratis, hoy</h1>
+      <p style="color:rgba(255,255,255,.85); font-size:17px; max-width:480px;">
+        Agenda tu clase de prueba con un profesor nativo. Sin tarjeta de crédito, sin compromiso.
+        Cupos limitados para esta semana.
+      </p>
+      <ul style="margin-top:24px; display:flex; flex-direction:column; gap:10px;">
+        <li style="color:#fff; font-weight:600;">✓ Clase 100% en vivo, 1 a 1</li>
+        <li style="color:#fff; font-weight:600;">✓ Evaluación de nivel incluida</li>
+        <li style="color:#fff; font-weight:600;">✓ Material digital de regalo</li>
+      </ul>
+      <div class="video-frame" style="max-width:420px; margin-top:32px;">
+        <iframe
+          src="https://www.youtube.com/embed/YE7VzlLtp-4?enablejsapi=1&rel=0"
+          title="Testimonio en video (placeholder)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="form-card" id="lead-form-card">
+      <h3 style="color:var(--oe-gray-900);">Reserva tu clase gratis <span class="tag-hint">Form Submission</span></h3>
+      <form data-lead-form id="form-lead-promo">
+        <div class="field">
+          <label for="lead-name">Nombre completo</label>
+          <input type="text" id="lead-name" name="name" placeholder="Ej. María Gómez" required>
+        </div>
+        <div class="field">
+          <label for="lead-email">Correo electrónico</label>
+          <input type="email" id="lead-email" name="email" placeholder="tu@email.com" required>
+        </div>
+        <div class="field">
+          <label for="lead-phone">Teléfono / WhatsApp</label>
+          <input type="tel" id="lead-phone" name="phone" placeholder="+57 300 000 0000" required>
+        </div>
+        <div class="field">
+          <label for="lead-country">País</label>
+          <select id="lead-country" name="country">
+            <option value="CO">Colombia</option>
+            <option value="MX">México</option>
+            <option value="BR">Brasil</option>
+            <option value="AR">Argentina</option>
+            <option value="ES">España</option>
+            <option value="US">Estados Unidos</option>
+            <option value="OTRO">Otro</option>
+          </select>
+        </div>
+        <div class="field field-check">
+          <input type="checkbox" id="lead-terms" name="terms" required>
+          <label for="lead-terms" style="margin:0; font-weight:400;">Acepto recibir información sobre cursos y promociones.</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="btn-submit-lead" data-cta="submit-lead-promo">Quiero mi clase gratis →</button>
+      </form>
+      <p class="form-note">Al enviar este formulario serás redirigido a la página de confirmación.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section class="section--tight">
+  <div class="container">
+    <div class="trust-strip">
+      <span>+3,000,000 estudiantes</span>
+      <span>Profesores 100% nativos</span>
+      <span>Disponible 24/7</span>
+      <span>Cancela cuando quieras</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA final ============ -->
+<section class="section section--gray text-center">
+  <div class="container">
+    <h2 class="section-title">¿Prefieres ver todos los planes primero?</h2>
+    <a href="landing-pricing.html" class="btn btn-secondary" data-cta="promo-to-pricing">Ver planes y precios</a>
+  </div>
+</section>
+
+<!-- ============ STICKY CTA MOBILE ============ -->
+<div class="sticky-cta" data-sticky-cta>
+  <div>
+    <strong>Cupos limitados esta semana</strong>
+    <small>Clase de prueba 100% gratis</small>
+  </div>
+  <a href="#lead-form-card" class="btn btn-primary btn-sm" data-cta="sticky-cta-trial">Reservar</a>
+</div>
+
+<footer class="site-footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border:none; padding:0;">
+    <span>© 2026 OE Tagging Sandbox.</span>
+    <a href="index.html" style="color:#fff;">← Volver al inicio</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

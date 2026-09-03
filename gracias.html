@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Gracias! | OE Tagging Sandbox</title>
+<meta name="description" content="Página de confirmación / conversión — úsala como trigger de página vista para conversiones en GTM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="sandbox-banner">
+  🧪 Esta es la página de conversión del sandbox. <a href="README.md">Ver cheat sheet →</a>
+</div>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo" data-nav-item="logo"><span class="logo-mark">OE</span> Sandbox</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html" data-nav-item="home">Inicio</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú">☰</button>
+    </div>
+  </nav>
+</header>
+
+<section class="section text-center">
+  <div class="container" style="max-width:640px;">
+    <div style="font-size:64px; margin-bottom:8px;">🎉</div>
+    <span class="eyebrow">Conversión completada <span class="tag-hint" style="margin-left:6px;">tag idea: Page View = /gracias.html</span></span>
+    <h1 class="section-title">¡Gracias, <span data-param="nombre">estudiante</span>!</h1>
+    <p id="confirmation-message" style="font-size:17px;">Tu solicitud fue recibida correctamente. En breve un asesor se pondrá en contacto contigo.</p>
+
+    <div class="card" style="text-align:left; margin:32px 0;">
+      <h3>Detalle de tu solicitud</h3>
+      <p style="margin-bottom:4px;"><strong>Tipo:</strong> <span data-param="tipo">—</span></p>
+      <p style="margin-bottom:4px; display:none;" data-row-plan><strong>Plan seleccionado:</strong> <span data-param="plan">—</span></p>
+      <p style="margin-bottom:4px; display:none;" data-row-precio><strong>Precio:</strong> $<span data-param="precio">—</span></p>
+      <p style="margin-bottom:0; font-size:12px; color:var(--oe-gray-600);">Esta información se lee de los parámetros de la URL (?tipo=...&plan=...) solo para fines de demostración — no se guarda en ningún servidor.</p>
+    </div>
+
+    <a href="index.html" class="btn btn-primary" data-cta="thankyou-back-home">Volver al inicio</a>
+    <a href="landing-pricing.html" class="btn btn-secondary" data-cta="thankyou-see-plans" style="margin-left:12px;">Ver otros planes</a>
+  </div>
+</section>
+
+<footer class="site-footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border:none; padding:0;">
+    <span>© 2026 OE Tagging Sandbox.</span>
+    <a href="index.html" style="color:#fff;">← Volver al inicio</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // Solo para mostrar en pantalla los parámetros recibidos del formulario/plan.
+  // No empuja nada a dataLayer a propósito: la página en sí (su URL) es lo que se tagguea.
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    document.querySelectorAll('[data-param]').forEach(function (el) {
+      var key = el.getAttribute('data-param');
+      if (params.has(key) && params.get(key)) {
+        el.textContent = decodeURIComponent(params.get(key));
+      }
+    });
+    if (params.get('plan')) document.querySelector('[data-row-plan]').style.display = 'block';
+    if (params.get('precio')) document.querySelector('[data-row-precio]').style.display = 'block';
+  })();
+</script>
+</body>
+</html>

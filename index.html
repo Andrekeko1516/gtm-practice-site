@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OE Tagging Sandbox — Aprende Inglés en Línea (sitio de práctica)</title>
+<meta name="description" content="Sitio de práctica para aprender a taggear con Google Tag Manager: formularios, video, imágenes, CTAs, comentarios y landings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- ============================================================
+     GOOGLE TAG MANAGER — reemplaza GTM-XXXXXXX por tu Container ID
+     ============================================================ -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="sandbox-banner">
+  🧪 Sandbox interno de tagging — no es el sitio real de Open English. <a href="README.md">Ver guía y cheat sheet de tags →</a>
+</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo" data-nav-item="logo">
+      <span class="logo-mark">OE</span> Sandbox
+    </a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html" data-nav-item="home">Inicio</a></li>
+      <li><a href="landing-pricing.html" data-nav-item="pricing">Planes</a></li>
+      <li><a href="landing-promo.html" data-nav-item="promo">Oferta especial</a></li>
+      <li><a href="#testimonios" data-nav-item="testimonials">Testimonios</a></li>
+      <li><a href="#comentarios" data-nav-item="comments">Comentarios</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="landing-pricing.html" class="btn btn-secondary btn-sm" data-cta="nav-plans">Ver planes</a>
+      <a href="landing-promo.html" class="btn btn-primary btn-sm" id="cta-header-trial" data-cta="header-trial">Prueba gratis</a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú">☰</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="section--navy">
+  <div class="container hero">
+    <div>
+      <span class="eyebrow" style="background:rgba(255,255,255,.15); color:#fff;">Método comprobado</span>
+      <h1>Aprende inglés hablando desde tu primera clase</h1>
+      <p style="color:rgba(255,255,255,.85); font-size:17px; max-width:520px;">
+        Clases en vivo con profesores nativos, práctica ilimitada y un plan de estudio que se adapta a tu nivel.
+        Este es un entorno de práctica para configurar tags de conversión, leads y engagement.
+      </p>
+      <div class="hero-actions">
+        <a href="landing-promo.html" class="btn btn-primary" id="cta-hero-trial" data-cta="hero-trial">Empezar prueba gratis</a>
+        <a href="#video-demo" class="btn btn-ghost" data-cta="hero-video">▶ Ver cómo funciona</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>3M+</strong><span>estudiantes graduados</span></div>
+        <div class="hero-stat"><strong>25</strong><span>países</span></div>
+        <div class="hero-stat"><strong>4.7/5</strong><span>calificación promedio</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://picsum.photos/id/1027/640/480" alt="Estudiante tomando clase de inglés en línea" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="section--tight">
+  <div class="container">
+    <div class="trust-strip">
+      <span>★ 4.7 en Google</span>
+      <span>App Store 4.8</span>
+      <span>+120 empresas confían en nosotros</span>
+      <span>Certificación al finalizar</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="section section--gray" id="video-demo">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Mira cómo funciona</span>
+      <h2 class="section-title">Una clase real, en un video real <span class="tag-hint">tag idea: YouTube Video</span></h2>
+      <p class="section-subtitle">Usa el trigger nativo "YouTube Video" de GTM para capturar Start, Progress (25/50/75/90%) y Complete.</p>
+    </div>
+    <div class="video-frame" style="max-width:820px; margin:0 auto;">
+      <iframe id="video-how-it-works"
+        src="https://www.youtube.com/embed/aqz-KE-bpKQ?enablejsapi=1&rel=0"
+        title="Video demo (placeholder) — reemplázalo por tu video real"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Por qué elegirnos</span>
+      <h2 class="section-title">Todo lo que necesitas para hablar inglés con confianza</h2>
+      <p class="section-subtitle">Cada tarjeta tiene un CTA distinto para practicar tagging de clics en elementos repetidos (misma clase, distinto contenido).</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card" data-feature-card="clases-en-vivo">
+        <div class="card-icon">🎓</div>
+        <h3>Clases en vivo ilimitadas</h3>
+        <p>Practica todos los días con profesores nativos certificados, a la hora que quieras.</p>
+        <a href="landing-pricing.html" class="btn btn-secondary btn-sm" data-cta="feature-clases">Conocer más</a>
+      </div>
+      <div class="card" data-feature-card="app-movil">
+        <div class="card-icon">📱</div>
+        <h3>App para practicar offline</h3>
+        <p>Lecciones cortas, pronunciación con IA y seguimiento de tu progreso desde el celular.</p>
+        <a href="landing-pricing.html" class="btn btn-secondary btn-sm" data-cta="feature-app">Conocer más</a>
+      </div>
+      <div class="card" data-feature-card="certificacion">
+        <div class="card-icon">🏆</div>
+        <h3>Certificación reconocida</h3>
+        <p>Obtén un certificado de nivel avalado para tu currículum o proceso de ascenso laboral.</p>
+        <a href="landing-pricing.html" class="btn btn-secondary btn-sm" data-cta="feature-certificacion">Conocer más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA DE IMÁGENES ============ -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Comunidad</span>
+      <h2 class="section-title">Nuestros estudiantes alrededor del mundo <span class="tag-hint">tag idea: Click - Just Links / imagen</span></h2>
+      <p class="section-subtitle">Cada imagen es un botón real (no solo un &lt;img&gt;), ideal para practicar un trigger de clic filtrado por atributo <code>data-gallery-item</code>.</p>
+    </div>
+    <div class="gallery">
+      <button class="gallery-item" data-gallery-item="mexico">
+        <img src="https://picsum.photos/id/1005/400/300" alt="Estudiante en México" loading="lazy">
+        <span class="gallery-caption">México 🇲🇽</span>
+      </button>
+      <button class="gallery-item" data-gallery-item="colombia">
+        <img src="https://picsum.photos/id/1011/400/300" alt="Estudiante en Colombia" loading="lazy">
+        <span class="gallery-caption">Colombia 🇨🇴</span>
+      </button>
+      <button class="gallery-item" data-gallery-item="brasil">
+        <img src="https://picsum.photos/id/1012/400/300" alt="Estudiante en Brasil" loading="lazy">
+        <span class="gallery-caption">Brasil 🇧🇷</span>
+      </button>
+      <button class="gallery-item" data-gallery-item="espana">
+        <img src="https://picsum.photos/id/1013/400/300" alt="Estudiante en España" loading="lazy">
+        <span class="gallery-caption">España 🇪🇸</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" data-lightbox>
+    <button class="lightbox-close" data-lightbox-close aria-label="Cerrar">×</button>
+    <img src="" alt="">
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="section" id="testimonios">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Testimonios</span>
+      <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card testimonial-card" data-testimonial="valentina">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=32" alt="Valentina R.">
+        <div>
+          <div class="stars">★★★★★</div>
+          <p>"En 6 meses pasé de nivel básico a poder dar entrevistas de trabajo en inglés."</p>
+          <strong>Valentina R. — Bogotá</strong>
+        </div>
+      </div>
+      <div class="card testimonial-card" data-testimonial="carlos">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=12" alt="Carlos M.">
+        <div>
+          <div class="stars">★★★★★</div>
+          <p>"Las clases en vivo son lo que más me ayudó a perder el miedo a hablar."</p>
+          <strong>Carlos M. — Ciudad de México</strong>
+        </div>
+      </div>
+      <div class="card testimonial-card" data-testimonial="ana">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=45" alt="Ana P.">
+        <div>
+          <div class="stars">★★★★★</div>
+          <p>"La app es perfecta para practicar en el bus, camino al trabajo."</p>
+          <strong>Ana P. — São Paulo</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section--navy section--tight">
+  <div class="container text-center">
+    <h2 style="color:#fff;">¿Listo para hablar inglés con confianza?</h2>
+    <p style="max-width:480px; margin:0 auto 24px;">Empieza hoy con una clase de prueba, sin costo y sin tarjeta de crédito.</p>
+    <a href="landing-promo.html" class="btn btn-primary" data-cta="banner-mid-trial">Quiero mi clase gratis</a>
+  </div>
+</section>
+
+<!-- ============ COMENTARIOS ============ -->
+<section class="section section--gray" id="comentarios">
+  <div class="container" style="max-width:760px;">
+    <div class="text-center">
+      <span class="eyebrow">Comentarios</span>
+      <h2 class="section-title">Déjanos tu comentario <span class="tag-hint">tag idea: Form Submission</span></h2>
+      <p class="section-subtitle">El formulario no envía datos a ningún servidor: solo agrega el comentario a la lista en el navegador. Perfecto para practicar el trigger "Form Submission" de GTM.</p>
+    </div>
+
+    <div class="form-card">
+      <form data-comment-form id="form-comments">
+        <div class="field">
+          <label for="comment-name">Nombre</label>
+          <input type="text" id="comment-name" name="name" placeholder="Tu nombre">
+        </div>
+        <div class="field">
+          <label for="comment-text">Tu comentario</label>
+          <textarea id="comment-text" name="comment" rows="3" placeholder="Cuéntanos tu experiencia..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="btn-submit-comment" data-cta="submit-comment">Publicar comentario</button>
+        <div class="form-success" data-comment-success>¡Gracias por tu comentario! Ya se agregó a la lista. ✓</div>
+      </form>
+    </div>
+
+    <ul class="comment-list" data-comment-list>
+      <li class="comment-item">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=5" alt="Diego">
+        <div class="comment-body">
+          <div class="comment-meta"><span class="comment-name">Diego F.</span><span class="comment-date">Hace 2 días</span></div>
+          <div class="stars">★★★★★</div>
+          <p>Excelente plataforma, los profesores son muy pacientes.</p>
+        </div>
+      </li>
+      <li class="comment-item">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=8" alt="Marcela">
+        <div class="comment-body">
+          <div class="comment-meta"><span class="comment-name">Marcela T.</span><span class="comment-date">Hace 5 días</span></div>
+          <div class="stars">★★★★☆</div>
+          <p>Me gustaría más horarios de fin de semana, pero por lo demás muy bien.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo" style="color:#fff;"><span class="logo-mark">OE</span> Sandbox</a>
+        <p style="margin-top:14px; max-width:280px;">Sitio de práctica interno para configurar y validar tags de Google Tag Manager. No representa la web real de producción.</p>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener" data-social="facebook" aria-label="Facebook">f</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" data-social="instagram" aria-label="Instagram">ig</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" data-social="youtube" aria-label="YouTube">▶</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" data-social="tiktok" aria-label="TikTok">tt</a>
+        </div>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <a href="landing-pricing.html">Planes y precios</a>
+        <a href="landing-promo.html">Prueba gratis</a>
+        <a href="index.html#testimonios">Testimonios</a>
+      </div>
+      <div>
+        <h4>Compañía</h4>
+        <a href="#">Nosotros</a>
+        <a href="#">Blog</a>
+        <a href="#">Trabaja con nosotros</a>
+      </div>
+      <div>
+        <h4>Newsletter <span class="tag-hint" style="margin-left:0;">Form Submission</span></h4>
+        <form data-newsletter-form id="form-newsletter">
+          <div class="field">
+            <input type="email" name="email" placeholder="tu@email.com" required style="background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.2); color:#fff;">
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm btn-block" data-cta="newsletter-submit">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OE Tagging Sandbox — proyecto interno de práctica.</span>
+      <span>Hecho para entrenar equipos de Performance / Analytics.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

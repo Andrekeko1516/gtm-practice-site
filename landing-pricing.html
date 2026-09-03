@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planes y Precios | OE Tagging Sandbox</title>
+<meta name="description" content="Landing de pricing para practicar tagging tipo ecommerce: view_item_list, select_item, begin_checkout con GTM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="sandbox-banner">
+  🧪 Sandbox interno de tagging — landing de precios. <a href="README.md">Ver cheat sheet →</a>
+</div>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo" data-nav-item="logo"><span class="logo-mark">OE</span> Sandbox</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html" data-nav-item="home">Inicio</a></li>
+      <li><a href="landing-promo.html" data-nav-item="promo">Oferta especial</a></li>
+      <li><a href="#faq" data-nav-item="faq">Preguntas frecuentes</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="landing-promo.html" class="btn btn-primary btn-sm" data-cta="nav-trial">Prueba gratis</a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú">☰</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="section--tight text-center">
+  <div class="container">
+    <span class="eyebrow">Planes</span>
+    <h1 class="section-title">Elige el plan que se ajuste a tu ritmo <span class="tag-hint">tag idea: view_item_list</span></h1>
+    <p class="section-subtitle">Los 3 planes de abajo son botones reales con atributos <code>data-plan-select</code> y <code>data-plan-price</code>, ideales para practicar variables de dataLayer o de DOM (clic de elemento).</p>
+  </div>
+</section>
+
+<!-- ============ PRICING CARDS ============ -->
+<section class="section" style="padding-top:0;">
+  <div class="container grid grid-3" data-item-list="planes-oe">
+
+    <div class="pricing-card" data-item-id="plan-mensual">
+      <h3>Mensual</h3>
+      <p>Flexibilidad total, cancela cuando quieras.</p>
+      <div class="price">$49<span>/mes</span></div>
+      <ul class="plan-features">
+        <li>Clases en vivo ilimitadas</li>
+        <li>App de práctica incluida</li>
+        <li>Soporte por chat 24/7</li>
+      </ul>
+      <button class="btn btn-secondary btn-block" data-plan-select="Mensual" data-plan-price="49" id="btn-plan-mensual">Seleccionar plan</button>
+    </div>
+
+    <div class="pricing-card is-featured" data-item-id="plan-anual">
+      <span class="pricing-badge">Más elegido</span>
+      <h3>Anual</h3>
+      <p>Ahorra 30% pagando una vez al año.</p>
+      <div class="price-old">$588</div>
+      <div class="price">$411<span>/año</span></div>
+      <ul class="plan-features">
+        <li>Todo lo del plan Mensual</li>
+        <li>2 evaluaciones de nivel al año</li>
+        <li>Certificado al finalizar</li>
+        <li>1 mes gratis adicional</li>
+      </ul>
+      <button class="btn btn-primary btn-block" data-plan-select="Anual" data-plan-price="411" id="btn-plan-anual">Seleccionar plan</button>
+    </div>
+
+    <div class="pricing-card" data-item-id="plan-bianual">
+      <h3>Bianual</h3>
+      <p>El mejor precio por mes, ideal a largo plazo.</p>
+      <div class="price-old">$1176</div>
+      <div class="price">$699<span>/2 años</span></div>
+      <ul class="plan-features">
+        <li>Todo lo del plan Anual</li>
+        <li>Mentoría de conversación mensual</li>
+        <li>Acceso a talleres exclusivos</li>
+      </ul>
+      <button class="btn btn-secondary btn-block" data-plan-select="Bianual" data-plan-price="699" id="btn-plan-bianual">Seleccionar plan</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ TABLA COMPARATIVA ============ -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Comparativa</span>
+      <h2 class="section-title">¿Qué incluye cada plan?</h2>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr><th>Característica</th><th>Mensual</th><th>Anual</th><th>Bianual</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Clases en vivo ilimitadas</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          <tr><td>App de práctica</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Evaluaciones de nivel</td><td>—</td><td>2 al año</td><td>4 al año</td></tr>
+          <tr><td>Certificado</td><td>—</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Mentoría de conversación</td><td>—</td><td>—</td><td>Mensual</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ACCORDION ============ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="section-title">¿Tienes dudas? <span class="tag-hint">tag idea: Click - All Elements + CSS Selector</span></h2>
+      <p class="section-subtitle">Cada pregunta es un elemento clickeable con clase <code>.accordion-trigger</code>: ideal para un trigger de clic filtrado por CSS Selector.</p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item" data-faq-id="cambio-plan">
+        <button class="accordion-trigger">¿Puedo cambiar de plan más adelante?<span class="icon">+</span></button>
+        <div class="accordion-panel"><p>Sí, puedes hacer upgrade o downgrade de tu plan en cualquier momento desde tu cuenta.</p></div>
+      </div>
+      <div class="accordion-item" data-faq-id="cancelacion">
+        <button class="accordion-trigger">¿Cómo cancelo mi suscripción?<span class="icon">+</span></button>
+        <div class="accordion-panel"><p>Puedes cancelar cuando quieras desde la sección de configuración de tu cuenta, sin penalidades.</p></div>
+      </div>
+      <div class="accordion-item" data-faq-id="nivel">
+        <button class="accordion-trigger">¿Necesito tener un nivel previo de inglés?<span class="icon">+</span></button>
+        <div class="accordion-panel"><p>No, hacemos una evaluación inicial gratuita para ubicarte en el nivel correcto desde tu primera clase.</p></div>
+      </div>
+      <div class="accordion-item" data-faq-id="certificado">
+        <button class="accordion-trigger">¿El certificado tiene validez internacional?<span class="icon">+</span></button>
+        <div class="accordion-panel"><p>El certificado avala el nivel alcanzado dentro de nuestro programa y es aceptado por empresas aliadas.</p></div>
+      </div>
+      <div class="accordion-item" data-faq-id="pago">
+        <button class="accordion-trigger">¿Qué métodos de pago aceptan?<span class="icon">+</span></button>
+        <div class="accordion-panel"><p>Tarjetas de crédito/débito, y en algunos países pago contra entrega o transferencia bancaria.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA final ============ -->
+<section class="section--navy section--tight text-center">
+  <div class="container">
+    <h2 style="color:#fff;">¿Aún no decides? Empieza con una clase gratis</h2>
+    <a href="landing-promo.html" class="btn btn-primary" data-cta="pricing-to-promo">Probar gratis primero</a>
+  </div>
+</section>
+
+<footer class="site-footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border:none; padding:0;">
+    <span>© 2026 OE Tagging Sandbox.</span>
+    <a href="index.html" style="color:#fff;">← Volver al inicio</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
