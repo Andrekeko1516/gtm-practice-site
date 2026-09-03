@@ -113,14 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ---- Formulario de lead (landing-promo) ----------------------------------- */
-  var leadForm = document.querySelector('[data-lead-form]');
-  if (leadForm) {
-    leadForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = encodeURIComponent(leadForm.querySelector('[name="name"]').value.trim());
-      window.location.href = 'gracias.html?tipo=prueba-gratis&nombre=' + name;
-    });
-  }
+ 
 
   /* ---- Newsletter (footer) -------------------------------------------------- */
   var newsletterForm = document.querySelector('[data-newsletter-form]');
